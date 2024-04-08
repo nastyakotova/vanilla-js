@@ -2,7 +2,7 @@ const container = document.getElementById('root');
 
 async function init() {
     const response = await fetch('https://65d46b083f1ab8c634350f7b.mockapi.io/api/items');
-
+// kot
     if (response.status === 200) {
         const data = await response.json();
 
