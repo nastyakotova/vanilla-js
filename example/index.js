@@ -7,6 +7,7 @@ async function init() {
         const data = await response.json();
 
         data.forEach((item, index) => {
+            console.log(item);
             const wrapper = document.createElement('div');
             wrapper.className = 'wrapper';
             container.appendChild(wrapper);
@@ -14,7 +15,7 @@ async function init() {
             const imageWrapper = document.createElement('div');
             imageWrapper.className = 'image-wrapper';
             wrapper.appendChild(imageWrapper);
-
+ 
             const image = document.createElement('img');
             image.src = `../images/${index + 1}.jpg`;
             image.alt = 'Image';
