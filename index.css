@@ -13,8 +13,12 @@
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-style: 16px;
 }
-.wrapper{
+.wrapper {
   /*display: flex;*/
   background-color: rgb(255, 171, 197);
   padding: 16px;
@@ -41,7 +45,7 @@
 .image {
   width: 100%;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
 }
 
 .name {
@@ -66,7 +70,7 @@
 .quantity {
   position: absolute;
   bottom: 10px;
-  left: 7px;
+  left: 10px;
   color: white;
 }
 
@@ -133,20 +137,48 @@
 }
 
 .modal-text-wrapper {
-  width: 50%;
-  float: right;
+  /* width: 50%; */
+  /* float: right; */
 }
 
 .modal-image-wrapper {
-  width: 50%;
-  float: left;
-  border-radius: 24px;
+  /* width: 50%; */
+  /* float: left; */
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
 }
+
+.modal-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .modal-image {
-  width: 50%;
-  
-  border-radius: 24px;
+  width: 100%;
+  height: 100%;
 }
+
 #modal-content {
-  
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-style: 16px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 16px;
+  padding: 24px;
+}
+
+.modal-header {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.modal-button {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  background-color: rgb(255, 244, 146);
 }
