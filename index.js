@@ -1,3 +1,5 @@
+const AVALIABLE_IDS = ['modal-wrapper', 'close-button', 'close-svg', 'close-path'];
+
 const createElem = (data, elemData, array = undefined, tag = 'div', className = elemData, additionalParam) => {
 
     const elem = document.createElement(tag);
@@ -57,11 +59,12 @@ const modalWrapper = document.getElementById('modal-wrapper');
 const modal = document.getElementById('modal');
 const closeButton = document.getElementById('close-button');
 const modalContent = document.getElementById('modal-content');
+const [html] = document.getElementsByTagName('html');
 
 const handleClick = (data, index) => {
 
     modalWrapper.style.display = 'flex';
-    console.log(data);
+    html.style.overflow = 'hidden';
 
     const modalContentArray = [];
 
@@ -89,18 +92,20 @@ const handleClick = (data, index) => {
 };
 
 const handleCloseModal = (event) => {
-    if (event.target.id !== 'modal') {
-        modalWrapper.style.display = 'none';
-        modalContent.innerHTML = '';
+    const closeAvaliable = AVALIABLE_IDS.includes(event.target.id);
 
+    if (closeAvaliable) {
+        modalWrapper.style.display = 'none';
+        html.style.overflow = 'auto';
+        modalContent.innerHTML = '';
     }
 };
 
 modalWrapper.addEventListener('click', handleCloseModal);
 closeButton.addEventListener('click', handleCloseModal);
 
-const appendChildFunc = (elem, сhildren) => {
-    for (let child of сhildren) {
+const appendChildFunc = (elem, children) => {
+    for (let child of children) {
         elem.appendChild(child);
     }
 };
