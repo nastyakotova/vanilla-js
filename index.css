@@ -1,1 +1,184 @@
-/* TODO: code here */
+.container {
+  background-color: rgba(13, 255, 108, 0.57);
+  width: 1200px;
+  height: 800px;
+  border: 5px solid rgba(94, 254, 19, 0.33);
+  border-radius: 20px;
+  margin: 30px;
+  padding: 20px;
+  overflow: hidden;
+  gap: 16px;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.wrapper {
+  background-color: rgb(255, 171, 197);
+  padding: 12px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.wrapper:hover {
+  box-shadow: 0 10px 40px rgb(254, 100, 169);
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 600;
+  color: rgb(248, 255, 0);
+  position: relative;
+  top: 8px;
+}
+
+.dateTime {
+  position: absolute;
+  top: 10px;
+  right: 7px;
+  background-color: rgba(255, 255, 255, 0.66);
+  color: rgb(6, 156, 42);
+  padding: 6px 9px;
+  font-size: 14px;
+  border-radius: 9px;
+}
+
+.quantity {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+}
+
+.price {
+  color: rgb(255, 57, 162);
+  font-size: 12px;
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+}
+
+.button {
+  background-color: rgb(4, 106, 0);
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  color: rgb(248, 255, 0);
+  transition: 0.2s;
+  cursor: pointer;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+}
+
+.button:hover {
+  background-color: rgb(255, 57, 162);
+  color: rgb(255, 255, 255);
+}
+
+#modal-wrapper {
+  display: none;
+  /* fixed - относительно окна браузера */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+#modal {
+  background: rgb(255, 255, 255);
+  width: 50%;
+  min-width: 600px;
+  border-radius: 24px;
+  position: relative;
+}
+
+#close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#close-button svg {
+  fill: rgb(255, 57, 162);
+  transition: 0.2s;
+}
+
+#close-button svg:hover {
+  fill: rgb(4, 106, 0);
+}
+
+.modal-text-wrapper {
+}
+
+.modal-image-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.modal-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-image {
+  width: 100%;
+  height: 100%;
+}
+
+#modal-content {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-style: 16px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 16px;
+  padding: 24px;
+}
+
+.modal-header {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.modal-button {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  background-color: rgb(255, 244, 146);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.modal-button:hover {
+  background-color: rgb(255, 242, 123);
+}

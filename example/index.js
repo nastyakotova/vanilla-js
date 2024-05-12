@@ -2,11 +2,12 @@ const container = document.getElementById('root');
 
 async function init() {
     const response = await fetch('https://65d46b083f1ab8c634350f7b.mockapi.io/api/items');
-
+// kot
     if (response.status === 200) {
         const data = await response.json();
 
         data.forEach((item, index) => {
+            console.log(item);
             const wrapper = document.createElement('div');
             wrapper.className = 'wrapper';
             container.appendChild(wrapper);
@@ -14,7 +15,7 @@ async function init() {
             const imageWrapper = document.createElement('div');
             imageWrapper.className = 'image-wrapper';
             wrapper.appendChild(imageWrapper);
-
+ 
             const image = document.createElement('img');
             image.src = `../images/${index + 1}.jpg`;
             image.alt = 'Image';
